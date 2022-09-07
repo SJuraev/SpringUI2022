@@ -1,0 +1,105 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 10640919800,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "the user navigates to Meetup homepage",
+            "match": {
+              "location": "BasicValidationSteps.theUserNavigatesToMeetupHomepage()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 1765800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 7,
+        "name": "Verify search results",
+        "description": "",
+        "id": "search-functionality;verify-search-results",
+        "after": [
+          {
+            "result": {
+              "duration": 932512000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3587581900,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user searches for \"Grayslake Bicycle Slow Roll\" in \"Lake Bluff, Illinois, US\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Grayslake Bicycle Slow Roll",
+                  "offset": 23
+                },
+                {
+                  "val": "Lake Bluff, Illinois, US",
+                  "offset": 56
+                }
+              ],
+              "location": "SearchFunctionalitySteps.the_user_searches_for_in(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1522789500,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "verifies the result set contains search criteria in the title",
+            "match": {
+              "location": "SearchFunctionalitySteps.verifies_the_result_set_contains_search_criteria_in_the_title()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Search Functionality",
+    "description": "",
+    "id": "search-functionality",
+    "keyword": "Feature",
+    "uri": "features/SearchFunctionality.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@search"
+      }
+    ]
+  }
+]
