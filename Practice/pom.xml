@@ -67,6 +67,27 @@
             <version>8.0.30</version>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/commons-dbutils/commons-dbutils -->
+        <!-- The Apache Commons DbUtils package is a set of Java utility classes for easing JDBC development.
+        i.e., dbutils is just a set of classes & methods to make work with DataBase much easier(not tool, just a helper library -->
+        <dependency>
+            <groupId>commons-dbutils</groupId>
+            <artifactId>commons-dbutils</artifactId>
+            <version>1.7</version>
+        </dependency>
+
+        <!--  Automatic Resource Management, automatic generation of getters,
+             setters, equals, hashCode and toString, and more! -->
+        <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.22</version>
+            <scope>provided</scope>
+        </dependency>
+
+
+
 
     </dependencies>
 

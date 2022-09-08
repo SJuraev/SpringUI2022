@@ -8,11 +8,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class DBUtils {
+public class DBUtilsV1 {
     private static Connection connection;
     private static Statement statement;
-    private static final String JDBC_URL =
-            "jdbc:mysql://3.129.60.236:3306/digitalbank?user=digitaluser&password=Demo123!";
+    private static final String JDBC_URL = ConfigReader.getProperty("jdbc_url");
 
     // Opening connection to a DB, if connection is not yet opened.
     public static void open(){
@@ -41,9 +40,9 @@ public class DBUtils {
     }
     // It is important to close a connection to a DB to avoid resource leak
     public static void main(String[] args) {
-        DBUtils.open();
-        ResultSet resultSet = DBUtils.query("SELECT* FROM account;");
-        List<Map<String,Object>> table = DBUtils.convertResultSet(resultSet);
+        DBUtilsV1.open();
+        ResultSet resultSet = DBUtilsV1.query("SELECT* FROM account;");
+        List<Map<String,Object>> table = DBUtilsV1.convertResultSet(resultSet);
         table.forEach(System.out::println);
     }
 
@@ -76,6 +75,7 @@ public class DBUtils {
         return null;
     }
 
+    //Key - column name, value - data in that column
    public static List<Map<String, Object>> convertResultSet(ResultSet resultSet){
         List<Map<String, Object>> table = new ArrayList<>();
         List<String> columnNames = getColumnNames(resultSet);
